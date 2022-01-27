@@ -31,9 +31,11 @@ public class Lead {
     @Column(name = "data_registration")
     private LocalDateTime dataRegistration;
 
+    @Column(name = "comment_client")
     @Lob
     private String commentClient;
 
+    @Column(name = "note_manager")
     @Lob
     private String noteManager;
 

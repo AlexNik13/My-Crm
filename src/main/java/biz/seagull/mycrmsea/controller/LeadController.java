@@ -22,7 +22,7 @@ public class LeadController {
         this.leadService = leadService;
     }
 
-    @PostMapping("/create")
+    @PostMapping("/creates")
     public LeadResponseDto createLead(@RequestBody LeadRequestDto dto){
         Lead lead =  leadService.createLead(dto);
         return LeadMapper.toLeadResponseDto(lead);
