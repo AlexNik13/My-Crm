@@ -27,4 +27,12 @@ public class LeadRepositoryImpl implements LeadRepository {
         return delegateRep.findAll(page);
     }
 
+    @Override
+    public Lead findById(Long leadId) {
+        Lead lead = delegateRep.findById(leadId).orElseThrow(
+
+        );
+        return null;
+    }
+
 }

@@ -34,4 +34,10 @@ public class LeadController {
         return leads.map(LeadMapper::toLeadResponseDto);
     }
 
+    @GetMapping("/{leadId}")
+    public LeadResponseDto getLead(@RequestParam Long leadId){
+        Lead lead = leadService.getLead(leadId);
+        return LeadMapper.toLeadResponseDto(lead);
+    }
+
 }

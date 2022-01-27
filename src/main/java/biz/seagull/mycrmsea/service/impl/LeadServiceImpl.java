@@ -47,5 +47,11 @@ public class LeadServiceImpl implements LeadService {
     return leadPage;
   }
 
+  @Override
+  public Lead getLead(Long leadId) {
+    Lead lead = leadRepository.findById(leadId);
+    return lead;
+  }
+
 
 }
